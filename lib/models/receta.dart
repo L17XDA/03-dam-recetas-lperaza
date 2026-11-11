@@ -33,7 +33,7 @@ class Receta {
       ingredientes: List<String>.from(json['ingredients']),
       instrucciones: List<String>.from(json['instructions']),
       tiempoPreparacion: json['prepTimeMinutes'],
-      tiempoCoccion: json['cookMinutes'],
+      tiempoCoccion: json['cookTimeMinutes'],
       porciones: json['servings'],
       calorias: json['caloriesPerServing'],
       imagenUrl: json['image'],

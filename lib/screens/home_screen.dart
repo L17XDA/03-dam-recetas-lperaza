@@ -21,9 +21,10 @@ class _HomeScreenState extends State<HomeScreen>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 168, 134, 170),
       appBar: AppBar(
         title: const Text('RecetasApp', style: TextStyle(color: Colors.white),),
-        backgroundColor: const Color.fromARGB(255, 80, 23, 3),
+        backgroundColor: const Color.fromARGB(255, 127, 1, 133),
       ),
       body: FutureBuilder<List<Receta>>(
         future: _futureRecetas,
