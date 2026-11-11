@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recetasapp/models/receta.dart';
+import 'package:recetasapp/screens/detalle_receta_screen.dart';
 import 'package:recetasapp/services/recipe_service.dart';
 import 'package:recetasapp/widgets/receta_card.dart';
 
@@ -40,7 +41,18 @@ class _HomeScreenState extends State<HomeScreen>{
             padding: const EdgeInsets.symmetric(vertical: 8),
             itemCount: recetas.length,
             itemBuilder: (context, index) {
-              return RecetaCard(receta: recetas[index]);
+              return RecetaCard(
+                receta: recetas[index],
+                onTap: () async {
+                  final bool? esFavorita = await Navigator.push(
+                    context, 
+                    MaterialPageRoute(
+                      builder: (context) =>
+                        DetalleRecetaScreen(receta: recetas[index])
+                    ),
+                  );
+                },
+              );
             },
           );
         },
