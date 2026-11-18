@@ -107,7 +107,7 @@ class _DetalleRecetaScreenState extends State<DetalleRecetaScreen> {
               children: [
                 CircleAvatar(
                   radius: 12,
-                  backgroundColor: Colors.deepOrange,
+                  backgroundColor: const Color.fromARGB(255, 157, 64, 173),
                   child: Text(
                     '${entrada.key+1}',
                     style: TextStyle(color: Colors.white, fontSize: 11),
